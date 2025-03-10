@@ -1,10 +1,11 @@
 import Item from "./Item";
 
 const ItemList = ({ items }) => {
-    // your code here
+    const filteredItems = items.filter(item => item.price > 10); // Filter items based on a condition
+
     return (
         <>
-            {items.map((item) => (
+            {filteredItems.map((item) => (
                 <Item key={item.id} item={item} />
             ))}
         </>
